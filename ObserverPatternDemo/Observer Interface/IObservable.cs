@@ -11,11 +11,13 @@
         /// </summary>
         /// <param name="observer">The object that is to receive notifications.</param>
         void Register(IObserver<T> observer);
+
         /// <summary>
         /// Unregisters the observer
         /// </summary>
         /// <param name="observer">The object that is to receive notifications.</param>
         void Unregister(IObserver<T> observer);
+        
         /// <summary>
         /// Notifies the observer that the provider has raised event.
         /// </summary>

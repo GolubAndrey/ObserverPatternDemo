@@ -50,5 +50,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Implemantation\Observable\WeatherInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Task description.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
