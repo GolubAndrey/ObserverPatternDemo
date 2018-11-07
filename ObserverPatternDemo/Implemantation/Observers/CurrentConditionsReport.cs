@@ -9,6 +9,7 @@ namespace ObserverPatternDemo.Implemantation.Observers
         private int humidity;
         private int pressure;
         private IObservable<WeatherInfo> observable;
+        
 
         public CurrentConditionsReport(IObservable<WeatherInfo> observable)
         {
@@ -32,10 +33,13 @@ namespace ObserverPatternDemo.Implemantation.Observers
             temperature = info.Temperature;
             humidity = info.Humidity;
             pressure = info.Pressure;
+
+            Report();
         }
 
-        public void Report() => Console.WriteLine($"Current weather values: temperature " +
+        public void Report() => Console.WriteLine($"-----------------------------------------------------------\n" +
+            $"Current weather values: temperature " +
             $"- {temperature}, humidity - {humidity}, pressure " +
-            $"- {pressure}");
+            $"- {pressure}\n-----------------------------------------------------------");
     }
 }

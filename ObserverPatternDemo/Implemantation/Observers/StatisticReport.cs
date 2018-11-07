@@ -34,11 +34,13 @@ namespace ObserverPatternDemo.Implemantation.Observers
             totalHumidity += info.Humidity;
             totalPressure += info.Pressure;
             counter++;
+
+            Report();
         }
 
-        public void Report() => Console.WriteLine($"Average weather values: average temperature " +
+        public void Report() => Console.WriteLine($"----------------------------------\nAverage weather values: average temperature " +
             $"- {totalTemperature / counter}, average humidity - {totalHumidity / counter}, average pressure " +
-            $"- {totalPressure / counter}");
+            $"- {totalPressure / counter}\n-----------------------------");
 
     }
 }
